@@ -1,1 +1,80 @@
-Utilitzar com a referència projecte: search-gifs-main
+Tasques a realitzar:
+
+- Pàgina 'index.html':
+    - Pàgina si no es passa el paràmetre '?pokeID=':
+        - Barra de navegació:
+            - Botó per anar a la pàgina 'combat.html'.
+            - Radio buttons per seleccionar mode visualització: clar (per defecte), fosc, sistema. (Utilitzar Local Storage per memoritzar la selecció).
+            - Input box per a buscar text entre les 10 cartes carregades i que es veuen en la pàgina.
+        - Body:
+            - 'Template' del format d'una carta semi-completa amb:
+                - Nom.
+                - Imatge.
+                - Atac.
+                - Defensa.
+            - Distribució de les cartes en la pàgina utilitzant 'Grid'.
+        - 'Responsive' amb 'media queries' per les diferents mides de pantalles.
+
+    - Pàgina index.html si es passa el paràmetre '?pokeID=5':
+        - Barra de navegació:
+            - Botó de 'back' per tornar a la pàgina sense paràmetre 'index.html?pokeID='
+        - Body:
+            - 'Template' del format d'una carta completa amb:
+                - Nom.
+                - Imatge frontal.
+                - Imatge posterior.
+                - Atac.
+                - Defensa.
+                - Tipus, que pot ser un llistat.
+
+
+
+- Pàgina 'combat.html':
+    - Barra de navegació:
+        - Botó per anar a la pàgina 'index.html' sense paràmetre.
+        - Radio buttons per seleccionar mode visualització: clar (per defecte), fosc, sistema. (Utilitzar Local Storage per memoritzar la selecció).
+    - Body:
+        - 'Template' del format del dors d'una carta.
+        - 'Template' del format d'una carta semi-completa (igual que la pàgina 'index.html') amb:
+            - Nom.
+            - Imatge.
+            - Atac.
+            - Defensa.
+        - Distribució de les cartes en la pàgina utilitzant 'Grid'.
+        - Botó 'Restart' no visible (es mostrarà al finalitzar un combat).
+    - 'Responsive' amb 'media queries' per les diferents mides de pantalles.
+
+
+
+- Fitxer 'service_name.js':
+    - Consulta a la PokeAPI per recuperar les dades d'un Pokemon aleatòriament (Fetch).
+
+
+
+- Fitxer 'main.js':
+    - Funcions comunes:
+        - Funció per la gestió dels Radio buttons i el mode de visualització.
+        - Funció que recuperi les dades de 1 Pokemon utilitzant 'service_name.js' i que no hi hagi duplicats amb les cartes prèviament carregades.
+        - Funció de memoritzar valors de la carta utilitzant els 'data-attributes'.
+
+    - Funcions específiques pàgina 'index.html':
+        - Funció que llegeixi el paràmetre de la URL per veure com s'ha de fer la càrrega HTML
+        - Funció que repeteixi 10 vegades la funció de recuperar dades de 1 Pokemon.
+        - Funcionalitat del botó 'Combat'.
+        - Funció per la gestió de l'Input box de cerca per nom de les 10 cartes que es mostren.
+        - Funcionalitat del botó 'Back'.
+
+    - Funcions específiques pàgina 'combat.html':
+        - Funcionalitat del botó 'Index'.
+        - Funció que al fer click sobre una de les cartes faci l'efecte de gir (flipcard).
+        - Funció de combat un cop girades 2 cartes.
+            - Comparar valors d'atac i defensa per decidir quin dels 2 guanya el combat:
+                - Si Atac_carta_1 > Defensa_carta_2 aleshores mostrar text: '1 ataca i guanya a 2'.
+                - Si Atac_carta_1 <= Defensa_carta_2 aleshores mostrar text: '1 ataca i perd contra 2'.
+        - Funció que habilita el botó 'Restart' només quan s'ha acabat un combat.
+        - Funcionalitat del botó 'Restart' que recarrega la pàgina.
+        - Funció que deshabilita el botó 'Restart' quan es carrega la pàgina 'combat.js'.
+
+
+NOTA: Utilitzar com a referència el projecte 'search-gifs-main'.
+ 
