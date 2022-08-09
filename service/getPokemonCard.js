@@ -1,3 +1,4 @@
+// Obtenir informació de una carta Pokemon segons el número de la carta que es passa per paràmetre.
 export default function getPokemonCard(numPokemon){
     const apiURL = "https://pokeapi.co/api/v2/pokemon/" + numPokemon;
     return fetch(apiURL)
