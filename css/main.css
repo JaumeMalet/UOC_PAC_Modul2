@@ -1,0 +1,19 @@
+/* Variables CSS */
+:root {
+	--groc: #ffff00;
+}
+
+/* Aplica a tots els tags HTML */
+* {
+	margin: 0;
+	bottom: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--groc);
+}
+
+h1 {
+    text-align: center;
+}
