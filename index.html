@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer type="module" src="js/main.js"></script>
+    <title>Pokedex</title>
 </head>
+
 <body>
-    
+    <main>
+        <header>
+            <h1>Pokedex</h1>
+        </header>
+        <section>
+            <div id="card-table"></div>
+        </section>
+    </main>
 </body>
+
+<!-- Plantilla d'una carta Pokemon -->
+<template id="card-template">
+    <a href="#" class="card-link">
+        <h2 class="card-title"></h2>
+        <img alt="" src="" class="card-image" />
+    </a>
+</template>
+
 </html>
