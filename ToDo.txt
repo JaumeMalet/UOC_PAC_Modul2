@@ -46,15 +46,18 @@ Tasques a realitzar:
 
 
 
-- Fitxer 'service_name.js':
-    - Consulta a la PokeAPI per recuperar les dades d'un Pokemon aleatòriament (Fetch).
+- Fitxer 'getPokemonCard.js':
+    - Consulta a la PokeAPI per recuperar les dades d'un Pokemon aleatòriament (Fetch). >> FET
 
+
+- Fitxer 'getPokemonCardCount.js'
+    - Consulta el número total de cartes Pokemon existents en la PokeAPI. >> FET
 
 
 - Fitxer 'main.js':
     - Funcions comunes:
         - Funció per la gestió dels Radio buttons i el mode de visualització.
-        - Funció que recuperi les dades de 1 Pokemon utilitzant 'service_name.js' i que no hi hagi duplicats amb les cartes prèviament carregades.
+        - Funció que recuperi les dades de 1 Pokemon utilitzant 'getPokemonCard.js' i que no hi hagi duplicats amb les cartes prèviament carregades.
         - Funció de memoritzar valors de la carta utilitzant els 'data-attributes'.
 
     - Funcions específiques pàgina 'index.html':
