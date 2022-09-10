@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer type="module" src="js/combat.js"></script>
+    <title>Combat Pokémon</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="index">
+                <button>
+                    <a href="index.html">INICI</a>
+                </button>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Tema</legend>
+                    <label for="radio_clar">Clar</label>
+                    <input type="radio" name="radio_tema" id="radio_clar" value="clar" checked>
+    
+                    <label for="radio_fosc">Fosc</label>
+                    <input type="radio" name="radio_tema" id="radio_fosc" value="bosc">
+    
+                    <label for="radio_sistema">Sistema</label>
+                    <input type="radio" name="radio_tema" id="radio_sistema" value="sistema">
+                </fieldset>
+            </div>
+            <div id="buscar">
+            </div>
+        </nav>
+    </header>
+    <section class="title">
+        <h1>Combat Pokémon</h1>
+    </section>
+    <section>
+        <div id="card-table"></div>
+    </section>
+</body>
+
+<!-- Plantilla d'una carta Pokemon de les dues cares-->
+<template id="card-template">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img alt="Carta Pokémon" src="img/flip-card-front.png" class="flip-card-front" />
+            </div>
+            <div class="flip-card-back">
+                <h2 class="card-nom"></h2>
+                <img alt="" src="" class="card-imatge" />
+                <h3 class="card-atac"></h3>
+                <h3 class="card-defensa"></h3>
+            </div>
+        </div>
+    </div>
+</template>
+</html>

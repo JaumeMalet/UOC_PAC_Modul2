@@ -19,18 +19,20 @@
             </div>
             <div>
                 <fieldset>
+                    <!-- mode visualització: clar (per defecte), fosc, sistema. (Utilitzar Local Storage per memoritzar la selecció). -->
                     <legend>Tema</legend>
                     <label for="radio_clar">Clar</label>
-                    <input type="radio" name="radio_tema" id="radio_clar" value="red" checked>
+                    <input type="radio" name="radio_tema" id="radio_clar" value="clar" checked>
     
                     <label for="radio_fosc">Fosc</label>
-                    <input type="radio" name="radio_tema" id="radio_fosc" value="green">
+                    <input type="radio" name="radio_tema" id="radio_fosc" value="fosc">
     
                     <label for="radio_sistema">Sistema</label>
-                    <input type="radio" name="radio_tema" id="radio_sistema" value="blue">
+                    <input type="radio" name="radio_tema" id="radio_sistema" value="sistema">
                 </fieldset>
             </div>
-            <div id="buscar>
+            <div id="buscar">
+                <!-- buscar text entre les 10 cartes carregades i que es veuen en la pàgina. -->
                 <label for="buscar">Nom:</label>
                 <input type="text" id="buscar_pokemon" placeholder="Nom Pokémon">  
             </div>
