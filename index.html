@@ -10,22 +10,67 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>Pokedex</h1>
-        </header>
-        <section>
-            <div id="card-table"></div>
-        </section>
-    </main>
+    <header>
+        <nav>
+            <div id="combat">
+                <button>
+                    <a href="combat.html">COMBAT</a>
+                </button>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Tema</legend>
+                    <label for="radio_clar">Clar</label>
+                    <input type="radio" name="radio_tema" id="radio_clar" value="red" checked>
+    
+                    <label for="radio_fosc">Fosc</label>
+                    <input type="radio" name="radio_tema" id="radio_fosc" value="green">
+    
+                    <label for="radio_sistema">Sistema</label>
+                    <input type="radio" name="radio_tema" id="radio_sistema" value="blue">
+                </fieldset>
+            </div>
+            <div id="buscar>
+                <label for="buscar">Nom:</label>
+                <input type="text" id="buscar_pokemon" placeholder="Nom Pokémon">  
+            </div>
+        </nav>
+    </header>
+    <section class="title">
+        <h1>Pokédex</h1>
+    </section>
+    <section>
+        <div id="card-table"></div>
+    </section>
+    <section>
+        <div id="card_ext"></div>
+    </section>
+    <!-- Enllaç per tornar enrera, similar al del propi navegador -->
+    <a id="back" href="javascript:history.back()" style="display:none">Tornar</a>
 </body>
 
 <!-- Plantilla d'una carta Pokemon -->
 <template id="card-template">
-    <a href="#" class="card-link">
-        <h2 class="card-title"></h2>
-        <img alt="" src="" class="card-image" />
-    </a>
+    <div class="card">
+        <a href="#" class="card-link" target="_self">
+            <h2 class="card-nom"></h2>
+            <img alt="" src="" class="card-imatge" />
+            <h3 class="card-atac"></h3>
+            <h3 class="card-defensa"></h3>
+        </a>
+    </div>
+</template>
+
+<!-- Plantilla d'una carta Pokemon Extesa -->
+<template id="card_ext-template">
+    <div class="card_ext">
+        <h2 class="card_ext-nom"></h2>
+        <img alt="" src="" class="card_ext-imatge-front" />
+        <img alt="" src="" class="card_ext-imatge-post" />
+        <h3 class="card_ext-atac"></h3>
+        <h3 class="card_ext-defensa"></h3>
+        <h3 class="card_ext-tipus"></h3>
+    </div>
 </template>
 
 </html>
