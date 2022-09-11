@@ -1,11 +1,5 @@
 Tasques a realitzar:
 
-- Pàgina 'combat.html':
-    - Body:
-        - Distribució de les cartes en la pàgina utilitzant 'Grid'.
-        - Botó 'Restart' no visible (es mostrarà al finalitzar un combat).
-    - 'Responsive' amb 'media queries' per les diferents mides de pantalles.
-
 - Fitxer 'main.js':
     - Funcions comunes:
         - Funció per la gestió dels Radio buttons i el mode de visualització.
@@ -13,17 +7,6 @@ Tasques a realitzar:
 
     - Funcions específiques pàgina 'index.html':
         - Funció per la gestió de l'Input box de cerca per nom de les 10 cartes que es mostren.
-
-    - Funcions específiques pàgina 'combat.html':
-        - Funció que al fer click sobre una de les cartes faci l'efecte de gir (flipcard).
-        - Funció de combat un cop girades 2 cartes.
-            - Comparar valors d'atac i defensa per decidir quin dels 2 guanya el combat:
-                - Si Atac_carta_1 > Defensa_carta_2 aleshores mostrar text: '1 ataca i guanya a 2'.
-                - Si Atac_carta_1 <= Defensa_carta_2 aleshores mostrar text: '1 ataca i perd contra 2'.
-        - Funció que habilita el botó 'Restart' només quan s'ha acabat un combat.
-        - Funcionalitat del botó 'Restart' que recarrega la pàgina.
-        - Funció que deshabilita el botó 'Restart' quan es carrega la pàgina 'combat.js'.
-
 
 NOTA: Utilitzar com a referència el projecte 'search-gifs-main'.
  

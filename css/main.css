@@ -126,7 +126,7 @@ nav {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flipped .flip-card-inner {
 	transform: rotateY(180deg);
 }
 
@@ -150,6 +150,7 @@ nav {
 /* Style the back side */
 .flip-card-back {
 	transform: rotateY(180deg);
+	background-color: yellowgreen;
 }
 
 /* Media queries Desktop-first*/
