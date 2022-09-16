@@ -4,11 +4,13 @@ import getPokemonCardsCount from "../service/getPokemonCardsCount.js";
 // -- Obtenir informació de una carta Pokemon
 import getPokemonCard from "../service/getPokemonCard.js";
 
-// Definició de constants
+// Definició de variables
 var PokemonCardsCount = await getPokemonCardsCount();
-// var PokemonCard = await getPokemonCard(Math.floor(Math.random() * PokemonCardsCount.count));
-
-const cards = document.querySelectorAll('.card-table');
+// const cards = document.querySelectorAll('.card-table');
+var buscar_text = document.getElementById('buscar_pokemon');
+var aPokemonCard = new Array();
+var PokemonCard = new Object();
+// const fragment = document.createDocumentFragment(); // Es pot utilitzar com a contenidor intermig alhora de crear les cartes mitjançant la plantilla
 
 // consultar si hi ha algun paràmetre a la URL
 let params = new URLSearchParams(document.location.search);
@@ -19,8 +21,7 @@ if (id) {
     const cardExtTemplate = document.getElementById("card_ext-template").content;
     let tipus = "";
 
-    var PokemonCard = await getPokemonCard(id);
-    console.dir(PokemonCard);
+    PokemonCard = await getPokemonCard(id);
     cardExtTemplate.querySelector('.card_ext-nom').innerHTML = PokemonCard.nom;
     // Si el link de la imatge frontal és 'null' vincular imatge d'un requadre amb el text 'No image'
     if(typeof PokemonCard.imatgeFront === 'string') {
@@ -49,12 +50,10 @@ if (id) {
     // mostrar l'enllaç per tornar enrera
     back.style.display = "block";
 } else {
-    // Obtenir 10 cartes aleatòriament i sense repetir
-    var aPokemonCard = new Array();
+    // Obtenir 10 cartes aleatòriament i sense repetir    
     const cardTable = document.getElementById("card-table");
     const cardTemplate = document.getElementById("card-template").content;
-    // const fragment = document.createDocumentFragment(); // Es pot utilitzar com a contenidor intermig alhora de crear les cartes mitjançant la plantilla
-    
+
     for (let index = 0; index < 10; index++) {
         // Obtenir l'informació d'una carta
         aPokemonCard[index] = await getPokemonCard(Math.floor(Math.random() * PokemonCardsCount.count));

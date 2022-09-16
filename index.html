@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <script defer type="module" src="js/main.js"></script>
+    <script defer src="js/funcions.js"></script>
     <title>Pokedex</title>
 </head>
 
@@ -34,7 +35,7 @@
             <div id="buscar">
                 <!-- buscar text entre les 10 cartes carregades i que es veuen en la pàgina. -->
                 <label for="buscar">Nom:</label>
-                <input type="text" id="buscar_pokemon" placeholder="Nom Pokémon">  
+                <input type="text" id="buscar_pokemon" placeholder="Nom Pokémon" onkeyup="buscar(this);">  
             </div>
         </nav>
     </header>
