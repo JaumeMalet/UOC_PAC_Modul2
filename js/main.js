@@ -1,20 +1,24 @@
 // Enllaços als serveis de JS
+// Enllaços als serveis de JS
 // -- Obtenir el nombre total de cartes Pokemon existents a la API
 import getPokemonCardsCount from "../service/getPokemonCardsCount.js";
 // -- Obtenir informació de una carta Pokemon
 import getPokemonCard from "../service/getPokemonCard.js";
 
 // Definició de variables
-var PokemonCardsCount = await getPokemonCardsCount();
+const PokemonCardsCount = await getPokemonCardsCount();
 // const cards = document.querySelectorAll('.card-table');
-var buscar_text = document.getElementById('buscar_pokemon');
+const buscar_text = document.getElementById('buscar_pokemon');
 var aPokemonCard = new Array();
 var PokemonCard = new Object();
 // const fragment = document.createDocumentFragment(); // Es pot utilitzar com a contenidor intermig alhora de crear les cartes mitjançant la plantilla
 
+// Carregar el tema segons el que hi hagi guarda en el localStorage
+get_tema();
+
 // consultar si hi ha algun paràmetre a la URL
-let params = new URLSearchParams(document.location.search);
-let id = params.get("pokeID");
+const params = new URLSearchParams(document.location.search);
+const id = params.get("pokeID");
 if (id) {
     // Mostrar carta extesa
     const cardExt = document.getElementById("card_ext");

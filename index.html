@@ -10,7 +10,7 @@
     <title>Pokedex</title>
 </head>
 
-<body>
+<body class="" id="body">
     <header>
         <nav>
             <div id="combat">
@@ -19,17 +19,17 @@
                 </button>
             </div>
             <div>
-                <fieldset>
+                <fieldset onchange="set_tema();">
                     <!-- mode visualització: clar (per defecte), fosc, sistema. (Utilitzar Local Storage per memoritzar la selecció). -->
                     <legend>Tema</legend>
-                    <label for="radio_clar">Clar</label>
                     <input type="radio" name="radio_tema" id="radio_clar" value="clar" checked>
+                    <label for="radio_clar">Clar</label>
     
-                    <label for="radio_fosc">Fosc</label>
                     <input type="radio" name="radio_tema" id="radio_fosc" value="fosc">
+                    <label for="radio_fosc">Fosc</label>
     
-                    <label for="radio_sistema">Sistema</label>
                     <input type="radio" name="radio_tema" id="radio_sistema" value="sistema">
+                    <label for="radio_sistema">Sistema</label>
                 </fieldset>
             </div>
             <div id="buscar">

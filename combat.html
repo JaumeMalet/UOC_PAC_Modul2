@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <script defer type="module" src="js/combat.js"></script>
+    <script defer src="js/funcions.js"></script>
     <title>Combat Pokémon</title>
 </head>
 
-<body>
+<body class="" id="body">
     <header>
         <nav>
             <div id="index">
@@ -18,16 +19,16 @@
                 </button>
             </div>
             <div>
-                <fieldset>
+                <fieldset onchange="set_tema();">
                     <legend>Tema</legend>
-                    <label for="radio_clar">Clar</label>
                     <input type="radio" name="radio_tema" id="radio_clar" value="clar" checked>
+                    <label for="radio_clar">Clar</label>
     
+                    <input type="radio" name="radio_tema" id="radio_fosc" value="fosc">
                     <label for="radio_fosc">Fosc</label>
-                    <input type="radio" name="radio_tema" id="radio_fosc" value="bosc">
     
-                    <label for="radio_sistema">Sistema</label>
                     <input type="radio" name="radio_tema" id="radio_sistema" value="sistema">
+                    <label for="radio_sistema">Sistema</label>
                 </fieldset>
             </div>
             <div id="buscar">

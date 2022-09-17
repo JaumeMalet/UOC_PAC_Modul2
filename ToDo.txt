@@ -1,12 +1,6 @@
 Tasques a realitzar:
 
-- Fitxer 'main.js':
-    - Funcions comunes:
-        - Funció per la gestió dels Radio buttons i el mode de visualització.
-        - Funció de memoritzar valors de la carta utilitzant els 'data-attributes'.
-
-    - Funcions específiques pàgina 'index.html':
-        - Funció per la gestió de l'Input box de cerca per nom de les 10 cartes que es mostren.
-
-NOTA: Utilitzar com a referència el projecte 'search-gifs-main'.
+"Opcionalment es pot configurar perquè la web es carregui segons estigui configurat el navegador o 
+el sistema operatiu de l'usuari. En aquest cas, s'haurà d'afegir una tercera opció al radio button 
+que sigui "sistema" i que agafi els estils segons l'usuari tingui configurat el seu equip (clar o fosc)."
  
