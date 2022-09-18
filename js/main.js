@@ -12,14 +12,9 @@ var aPokemonCard = new Array();
 var PokemonCard = new Object();
 // const fragment = document.createDocumentFragment(); // Es pot utilitzar com a contenidor intermig alhora de crear les cartes mitjançant la plantilla
 
-// Carregar el tema segons el que hi hagi guarda en el localStorage
+// Carregar el tema segons el que hi hagi guardat en el localStorage
 get_tema();
-
-// Quan estigui la pàgina carregada
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("1");
-});
-
+set_tema();
 // consultar si hi ha algun paràmetre a la URL
 const params = new URLSearchParams(document.location.search);
 const id = params.get("pokeID");

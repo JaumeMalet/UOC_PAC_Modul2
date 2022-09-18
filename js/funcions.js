@@ -1,4 +1,4 @@
-// Canvia el tema de la pàgina segons el valor guardat en el localstorage
+// Canvia el radio button seleccionat del tema de la pàgina segons el valor guardat en el localstorage
 function get_tema() {
     //Obtenir els diferents radio buttons del tema
     const tema = document.getElementsByName('radio_tema');
@@ -13,7 +13,7 @@ function get_tema() {
 
 
 
-// Canvia el tema de la pàgina segons el radio button
+// Canvia el tema de la pàgina segons el radio button seleccionat
 function set_tema() {
     //Obtenir els diferents radio buttons del tema
     const tema = document.getElementsByName('radio_tema');

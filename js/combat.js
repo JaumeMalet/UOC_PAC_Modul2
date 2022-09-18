@@ -11,8 +11,9 @@ var aPokemonCard = new Array();
 const cardTable = document.getElementById("card-table");
 const cardTemplate = document.getElementById("card-template").content;
 
-// Carregar el tema segons el que hi hagi guarda en el localStorage
+// Carregar el tema segons el que hi hagi guardat en el localStorage
 get_tema();
+set_tema();
 
 // Obtenir 10 cartes aleatòriament i sense repetir
 for (let index = 0; index < 10; index++) {
