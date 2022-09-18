@@ -14,9 +14,9 @@
     <header>
         <nav>
             <div id="combat">
-                <button>
-                    <a href="combat.html">COMBAT</a>
-                </button>
+                <a href="combat.html">
+                    <input type="button" value="Combat">
+                </a>
             </div>
             <div>
                 <fieldset onchange="set_tema();">
@@ -24,32 +24,33 @@
                     <legend>Tema</legend>
                     <input type="radio" name="radio_tema" id="radio_clar" value="clar" checked>
                     <label for="radio_clar">Clar</label>
-    
+                    
                     <input type="radio" name="radio_tema" id="radio_fosc" value="fosc">
                     <label for="radio_fosc">Fosc</label>
-    
+                    
                     <input type="radio" name="radio_tema" id="radio_sistema" value="sistema">
                     <label for="radio_sistema">Sistema</label>
                 </fieldset>
             </div>
             <div id="buscar">
                 <!-- buscar text entre les 10 cartes carregades i que es veuen en la pàgina. -->
-                <label for="buscar">Nom:</label>
+                <label for="buscar">Búsqueda:</label>
                 <input type="text" id="buscar_pokemon" placeholder="Nom Pokémon" onkeyup="buscar(this);">  
             </div>
         </nav>
     </header>
     <section class="title">
-        <h1>Pokédex</h1>
+        <h1>Pokedex</h1>
     </section>
+    <div id="loading">
+        <img alt="loading" src="img/loading.gif" />
+    </div>
     <section>
         <div id="card-table"></div>
     </section>
     <section>
         <div id="card_ext"></div>
     </section>
-    <!-- Enllaç per tornar enrera, similar al del propi navegador -->
-    <a id="back" href="javascript:history.back()" style="display:none">Tornar</a>
 </body>
 
 <!-- Plantilla d'una carta Pokemon -->
@@ -68,11 +69,16 @@
 <template id="card_ext-template">
     <div class="card_ext">
         <h2 class="card_ext-nom"></h2>
-        <img alt="" src="" class="card_ext-imatge-front" />
-        <img alt="" src="" class="card_ext-imatge-post" />
+        <div id="imatges">
+            <img alt="" src="" class="card_ext-imatge-front" />
+            <img alt="" src="" class="card_ext-imatge-post" />
+        </div>
         <h3 class="card_ext-atac"></h3>
         <h3 class="card_ext-defensa"></h3>
         <h3 class="card_ext-tipus"></h3>
+    </div>
+    <div>
+        <a id="back" href="javascript:history.back()" style="display:none">Tornar</a> <!-- Enllaç per tornar enrera, similar al del propi navegador -->
     </div>
 </template>
 

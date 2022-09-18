@@ -9,7 +9,7 @@ function get_tema() {
         //Per el radio button seleccionat:
         if(element.value == localStorage.getItem('tema')) element.click()
     });
-}
+};
 
 
 
@@ -33,7 +33,7 @@ function set_tema() {
             localStorage.setItem("tema", element.value);
         }
     });
-}
+};
 
 
 
@@ -62,6 +62,27 @@ function buscar(div_text) {
 
 
 
+// Afegir l'efecte de girar la carta al fer click a sobre
+function flip_card_fx() {
+    const flip_cards = document.querySelectorAll('.flip-card');
+    var flipped_card_val = new Object();
+    
+    flip_cards.forEach((flip_card) => {
+        flip_card.addEventListener('click', function() {
+            flip_card.classList.add('flipped');
+            flipped_card_val =
+            {
+                "card_nom": flip_card.querySelector('.card-nom').textContent,
+                "card_atac": (flip_card.querySelector('.card-atac').textContent).split(" ")[1],
+                "card_defensa": (flip_card.querySelector('.card-defensa').textContent).split(" ")[1]
+            }
+            flip_card_func(flipped_card_val); 
+        });
+    });
+};
+
+
+
 // Comprovar si ja hi ha 2 cartes girades per començar el combat
 var flipped_cards_index = 0;
 var flipped_cards_array = new Array();
@@ -84,4 +105,4 @@ function flip_card_func(obj) {
             window.location.reload();
         }, 500)
     }
-}
+};

@@ -46,23 +46,10 @@ for (let index = 0; index < 10; index++) {
     // Afegir la carta a la pàgina
     cardTable.appendChild(cardTemplate.cloneNode(true));
 }
+// Ocultar l'animació de càrrega de la pàgina
+document.querySelector('#loading').style.display = 'none';
 
-
-// Afegir funcionalitat de girar la carta al fer-hi click
-const flip_cards = document.querySelectorAll('.flip-card');
-var flipped_card_val = new Object();
-
-flip_cards.forEach((flip_card) => {
-    flip_card.addEventListener('click', function() {
-        flip_card.classList.add('flipped');
-        flipped_card_val =
-        {
-            "card_nom": flip_card.querySelector('.card-nom').textContent,
-            "card_atac": (flip_card.querySelector('.card-atac').textContent).split(" ")[1],
-            "card_defensa": (flip_card.querySelector('.card-defensa').textContent).split(" ")[1]
-        }
-        flip_card_func(flipped_card_val); 
-    });
-});
+// Afegir funcionalitat i efecte de girar la carta al fer click a sobre de qualsevol d'elles
+flip_card_fx();
 
 

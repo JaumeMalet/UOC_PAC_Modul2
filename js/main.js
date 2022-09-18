@@ -1,5 +1,4 @@
 // Enllaços als serveis de JS
-// Enllaços als serveis de JS
 // -- Obtenir el nombre total de cartes Pokemon existents a la API
 import getPokemonCardsCount from "../service/getPokemonCardsCount.js";
 // -- Obtenir informació de una carta Pokemon
@@ -15,6 +14,11 @@ var PokemonCard = new Object();
 
 // Carregar el tema segons el que hi hagi guarda en el localStorage
 get_tema();
+
+// Quan estigui la pàgina carregada
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("1");
+});
 
 // consultar si hi ha algun paràmetre a la URL
 const params = new URLSearchParams(document.location.search);
@@ -50,7 +54,8 @@ if (id) {
     cardExtTemplate.querySelector('.card_ext-tipus').innerHTML = "Tipus: " + tipus;
     // Afegir la carta a la pàgina
     cardExt.appendChild(cardExtTemplate.cloneNode(true));
-    
+    // Ocultar l'animació de càrrega de la pàgina
+    document.querySelector('#loading').style.display = 'none';
     // mostrar l'enllaç per tornar enrera
     back.style.display = "block";
 } else {
@@ -90,6 +95,8 @@ if (id) {
         // Afegir la carta a la pàgina
         cardTable.appendChild(cardTemplate.cloneNode(true));
     }
+    // Ocultar l'animació de càrrega de la pàgina
+    document.querySelector('#loading').style.display = 'none';
     // ocultar l'enllaç per tornar enrera
     back.style.display = "none";
 }
