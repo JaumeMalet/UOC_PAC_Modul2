@@ -1,6 +1,3 @@
 Tasques a realitzar:
 
-"Opcionalment es pot configurar perquè la web es carregui segons estigui configurat el navegador o 
-el sistema operatiu de l'usuari. En aquest cas, s'haurà d'afegir una tercera opció al radio button 
-que sigui "sistema" i que agafi els estils segons l'usuari tingui configurat el seu equip (clar o fosc)."
  

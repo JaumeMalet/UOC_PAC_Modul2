@@ -4,9 +4,10 @@
 /* Aplica a tots els tags HTML */
 * {margin:0; bottom:0; box-sizing:border-box;}
 
+/* Sobreescriure valor variables CSS segons la classe*/
 body.clar {--backgroundcolor:#ffff00; --textcolor:yellowgreen}
 body.fosc {--backgroundcolor:gray ; --textcolor:darkolivegreen}
-body.sistema {--backgroundcolor:#ffff00; --textcolor:yellowgreen}
+
 body {background-color:var(--backgroundcolor);}
 h1 {text-align:center; font-size:3em; color:darkblue; margin:24px;}
 h2 {text-align:center; margin-top:12px;}
@@ -35,7 +36,8 @@ nav {display:grid; grid-template-columns:repeat(3, 1fr); justify-items:center; a
 .flip-card-back {transform:rotateY(180deg); background-color:var(--textcolor);}/* Style the back side */
 
 
-/* Media queries Desktop-first*/
+/* Media queries*/
+/* Responsive. Desktop-first*/
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	#card-table {display:grid; grid-template-columns:repeat(5, 1fr);}
@@ -55,4 +57,12 @@ nav {display:grid; grid-template-columns:repeat(3, 1fr); justify-items:center; a
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	#card-table {display:grid; grid-template-columns:repeat(3, 1fr);}
+}
+
+/*Tema clar/fosc segons estigui definit en el sistema*/
+@media (prefers-color-scheme: light){
+	body{--backgroundcolor:#ffff00; --textcolor:yellowgreen}
+}
+@media (prefers-color-scheme: dark){
+	body{--backgroundcolor:gray ; --textcolor:darkolivegreen}
 }
